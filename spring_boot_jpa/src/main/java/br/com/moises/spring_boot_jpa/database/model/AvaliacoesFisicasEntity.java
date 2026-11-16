@@ -2,7 +2,6 @@ package br.com.moises.spring_boot_jpa.database.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.math.BigDecimal;
 
 @Entity
@@ -22,6 +21,5 @@ public class AvaliacoesFisicasEntity {
     private BigDecimal altura;
     @Column(name = "percentual_gordura_corporal", nullable = false)
     private BigDecimal porcentagemGorduraCorporal;
-
 
 }

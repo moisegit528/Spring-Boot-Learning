@@ -19,4 +19,7 @@ public class AlunosEntity {
     @Column(nullable = false, unique = true)
     private String email;
 
+    @OneToOne
+    @JoinColumn(name = "avaliacao_fisica_id")
+    private AvaliacoesFisicasEntity avaliacaoFisica;
 }
