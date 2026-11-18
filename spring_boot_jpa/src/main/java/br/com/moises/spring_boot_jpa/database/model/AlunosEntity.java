@@ -3,6 +3,9 @@ package br.com.moises.spring_boot_jpa.database.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,4 +25,8 @@ public class AlunosEntity {
     @OneToOne
     @JoinColumn(name = "avaliacao_fisica_id")
     private AvaliacoesFisicasEntity avaliacaoFisica;
+
+    @OneToMany(mappedBy = "aluno")
+    private Set<TreinosEntity> treinos = new HashSet<>();
+
 }
